@@ -1,0 +1,23 @@
+def find_answer(question):
+    with open("notice.txt","r") as f:
+        while True:
+            line=f.readline()
+            if not line:
+                break
+            else:
+                keyword=line.split("|")[0]
+                notice=line.split("|")[1]
+            if keyword in question:
+                return notice
+        return False
+if __name__=="__main__":
+    question=input("请问您需要点什么？")
+    while True:
+        if question=="bye":
+            print("我知道了")
+        notice=find_answer(question)
+        if not notice:
+            question=input("请你再说一遍")
+        else:
+            print(notice)
+            question=input("您可以询问一些其他有关的问题")
