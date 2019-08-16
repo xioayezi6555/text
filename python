@@ -20,4 +20,5 @@ if __name__=="__main__":
             question=input("请你再说一遍")
         else:
             print(notice)
-            question=input("您可以询问一些其他有关的问题")
+            问题=输入（ “您可以询问一些其他有关的问题”）
+333
